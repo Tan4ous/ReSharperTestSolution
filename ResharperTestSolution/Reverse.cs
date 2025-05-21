@@ -2,17 +2,27 @@
 
 public class Reverse
 {
-    public static void PrintReversed(string input)
+    static void A()
     {
-        var reversed = Reversed();
-        Console.WriteLine(reversed);
+        static void PrintReversed(string input)
+        {
+            var reversed = Reversed(input);
+            Console.WriteLine(reversed);
+        }
 
-        string Reversed()
+        Console.WriteLine("reversed");
+        Console.WriteLine("reversed");
+        Console.WriteLine("reversed");
+        Console.WriteLine("reversed");
+        Console.WriteLine("reversed");
+        Console.WriteLine("reversed");
+
+        static string Reversed(string input)
         {
             var chars = input.ToCharArray();
             Array.Reverse(chars);
-            var s = new string(chars);
-            return s;
+            var reversed = new string(chars);
+            return reversed;
         }
     }
 }

@@ -28,11 +28,17 @@ var pubTypesQuery = from type in assembly.GetTypes()
 
 foreach (var groupOfMethods in pubTypesQuery)
 {
-    Console.WriteLine($"Type: {groupOfMethods.Key}");
-    foreach (var method in groupOfMethods)
+    NewFunction(groupOfMethods);
+}
+
+void NewFunction(IGrouping<string, string> grouping)
+{
+    Console.WriteLine($"Type: {grouping.Key}");
+    foreach (var method in grouping)
     {
         Console.WriteLine($"  {method}");
     }
 }
+
 #endregion
 
